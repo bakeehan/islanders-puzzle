@@ -10,6 +10,7 @@ function dragElement(elmnt) {
   var calcMiddle = (parseInt(getComputedStyle(elmnt).width, 10))/2;
 
   function dragMouseDown(e) {
+    elmnt.style.position = "absolute";
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:

@@ -20,7 +20,7 @@ for (i=0;i<12;i++) {
 var islandCont = document.getElementById("islandersContainer");
 
 for (i=0;i<precinct.length;i++) {
-	islandCont.innerHTML += "<img src='images/" + precinct[i][0] + ".png' class='islander'>"
+	islandCont.innerHTML += "<div class='islander-box'><img src='images/" + precinct[i][0] + ".png' class='islander'></div>";
 }
 
 function checkWeight(islander) {

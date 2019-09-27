@@ -1,11 +1,18 @@
-.islander {
-	height:50px;
-	width: 50px;
+.islander, .islander-box {
+	height:75px;
+	width: 75px;
 	border-radius: 50%;
-	position: absolute;
+	/*position: absolute;*/
+}
+
+.islander-box {
+	margin:10px;
 }
 
 #islandersContainer {
-	width:560px;
+	width:570px;
 	margin: 30px auto;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
 }
