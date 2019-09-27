@@ -1,6 +1,8 @@
 body {
 	margin: 0;
 	padding:0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
 }
 
 .main-container {
@@ -11,7 +13,7 @@ body {
 	"previous islanders";
 	margin:10px auto;
 	width: 900px;
-	grid-template-columns: 250px 650px;
+	grid-template-columns: 275px 625px;
 	grid-template-rows: 350px 0 200px;
 	background-color: yellow;
 }
@@ -38,6 +40,32 @@ body {
 .holt {
 	grid-area:holt;
 	background-color: orange;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.holt img {
+	width:125px;
+	bottom:0;
+	left:40px;
+	position: absolute;
+}
+
+.holt p {
+	margin:0 10px 0 0;
+	background-color: white;
+	padding:10px;
+	border-radius: 15px;
+	position: relative;
+}
+
+.holt p img {
+	position: absolute;
+    left: 150px;
+    bottom: -57px;
+    height: 60px;
+    width: auto;
 }
 
 .previous {
