@@ -1,3 +1,21 @@
+body {
+	margin: 0;
+	padding:0;
+}
+
+.main-container {
+	display:grid;
+	grid-template-areas:
+	"holt seesaw"
+	"previous seesaw"
+	"previous islanders";
+	margin:10px auto;
+	width: 900px;
+	grid-template-columns: 250px 650px;
+	grid-template-rows: 350px 0 200px;
+	background-color: yellow;
+}
+
 .islander, .islander-box {
 	height:75px;
 	width: 75px;
@@ -10,9 +28,24 @@
 }
 
 #islandersContainer {
-	width:570px;
-	margin: 30px auto;
 	display: flex;
 	flex-wrap:wrap;
 	justify-content: space-between;
+	grid-area:islanders;
+	background-color: red;
+}
+
+.holt {
+	grid-area:holt;
+	background-color: orange;
+}
+
+.previous {
+	grid-area:previous;
+	background-color: blue;
+}
+
+#seesaw {
+	grid-area:seesaw;
+	background-color: green;
 }
