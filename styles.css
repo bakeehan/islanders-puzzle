@@ -1,0 +1,11 @@
+.islander {
+	height:50px;
+	width: 50px;
+	border-radius: 50%;
+	position: absolute;
+}
+
+#islandersContainer {
+	width:560px;
+	margin: 30px auto;
+}
