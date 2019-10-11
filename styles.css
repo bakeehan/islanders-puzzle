@@ -58,7 +58,7 @@ body {
 	margin:0 5px 0 0;
 	background-color: white;
 	padding:5px 10px 10px;
-	border-radius: 0 15px 15px 15px;
+	border-radius: 0 0 20px 0;
 	position: relative;
 }
 
@@ -76,4 +76,41 @@ body {
 
 #seesaw {
 	grid-area:seesaw;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.saw-side {
+	background-color: red;
+	width:310px;
+	height: 350px;
+}
+
+.saw-line, .saw-base {
+	background-color:brown;
+	position: absolute;
+}
+
+.saw-line {
+	width:600px;
+	height:20px;
+	top:300px;
+	left:12.5px;
+	transition-duration: 2s;
+/*	-ms-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	transform: rotate(5deg);*/
+}
+
+.saw-base {
+	top:320px;
+	left:282.5px;
+	height:60px;
+	width:60px;
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
