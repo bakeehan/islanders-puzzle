@@ -9,13 +9,13 @@ body {
 .main-container {
 	display:grid;
 	grid-template-areas:
+	"holt weights"
 	"holt seesaw"
-	"previous seesaw"
 	"previous islanders";
 	margin:10px auto;
 	width: 900px;
 	grid-template-columns: 275px 625px;
-	grid-template-rows: 350px 0 200px;
+	grid-template-rows: 260px 90px 200px;
 }
 
 .islander, .islander-box {
@@ -34,6 +34,7 @@ body {
 	flex-wrap:wrap;
 	justify-content: space-between;
 	grid-area:islanders;
+	/*position: relative;*/
 }
 
 .holt {
@@ -74,19 +75,22 @@ body {
 	grid-area:previous;
 }
 
-#seesaw {
-	grid-area:seesaw;
-	position: relative;
+#weigher {
+	grid-area:weights;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	overflow: hidden;
 }
 
 .saw-side {
-	background-color: red;
 	width:310px;
 	height: 350px;
+}
+
+#seesaw {
+	grid-area:seesaw;
+	position: relative;
+	overflow: hidden;
 }
 
 .saw-line, .saw-base {
@@ -97,7 +101,7 @@ body {
 .saw-line {
 	width:600px;
 	height:20px;
-	top:300px;
+	bottom:35px;
 	left:12.5px;
 	transition-duration: 2s;
 /*	-ms-transform: rotate(5deg);
@@ -106,11 +110,19 @@ body {
 }
 
 .saw-base {
-	top:320px;
+	bottom:-30px;
 	left:282.5px;
 	height:60px;
 	width:60px;
 	-ms-transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
+}
+
+#go {
+	position: absolute;
+	bottom:6px;
+	left:282.5px;
+	width:60px;
+	z-index: 5;
 }

@@ -7,12 +7,14 @@ for (i=0;i<12;i++) {
 	var whom = Math.floor(Math.random()*(cast.length-1));
 	if (i === switchy) {
 		if (switchy % 2 === 0) {
-			precinct.push([cast[whom],1]);
+			precinct.push([cast[whom],3]);
+			console.log(cast[whom] + " is heavier");
 		} else {
-			precinct.push([cast[whom],-1]);
+			precinct.push([cast[whom],1]);
+			console.log(cast[whom] + " is lighter");
 		}
 	} else {
-	precinct.push([cast[whom],0]);
+	precinct.push([cast[whom],2]);
 	}
 	cast.splice(whom,1);
 }
@@ -24,7 +26,12 @@ for (i=0;i<precinct.length;i++) {
 }
 
 function checkWeight(islander) {
-	return islander[1] != 0;
+	// return islander[1] != 0;
+	if (islander[1] > 0) {
+		return "heavier";
+	} else if (islander[1] < 0) {
+		return "lighter";
+	}
 }
 
 // islandCont.innerHTML += "<p> <img src='images/" + precinct.find(checkWeight)[0] + ".png'>"
